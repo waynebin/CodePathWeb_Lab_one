@@ -56,4 +56,20 @@ body {
   font-weight: bold;
   margin-bottom: 1em;
   color: #ffff00;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
 }
