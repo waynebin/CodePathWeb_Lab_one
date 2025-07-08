@@ -1,0 +1,51 @@
+.sectionStyle{
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px; /* Reduced padding */
+    margin: 8px 0; /* Reduced margin */
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stock-wrapper {
+      border: 2px solid #1976d2;
+      border-radius: 12px;
+      padding: 15px; /* Reduced padding */
+      margin: 10px auto; /* Reduced margin */
+      background-color: rgba(255, 255, 255, 0.95);
+      max-width: 1000px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      position: relative;
+      display: flex;
+      z-index: 1;
+}
+.button-container {
+    text-align: center;
+    margin-bottom: 10px; /* Reduced from 20px */
+    padding: 10px 0; /* Add small padding instead of large margin */
+}
+
+.stock-button {
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    padding: 8px 16px; /* More compact padding */
+    margin: 3px 5px; 
+    border-radius: 6px; 
+    cursor: pointer;
+    font-size: 14px; /* Smaller font size */
+    transition: background-color 0.3s ease;
+    min-width: 80px; 
+}
+
+
+.stock-button:hover {
+    background-color: #1565c0;
+    transform: translateY(-1px); /* Subtle hover effect */
+}
+
+
+.stock-wrapper h2 {
+    margin: 0 0 15px 0; /* Reduced bottom margin */
+    font-size: 1.5rem; /* Slightly smaller title */
+}
