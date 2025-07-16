@@ -9,6 +9,9 @@ import StockChart from './StockChart.jsx';
 import './Stock.css';
 
 function Stock({ticker}) {
+  // export ticker to be used in other components
+    
+    
   // Import available stock data attributes
   const {quote, quoteLoading, quoteError} = useQuote(ticker);
   const {financials, financialsLoading, financialsError} = useFinancials(ticker);
@@ -31,12 +34,12 @@ function Stock({ticker}) {
 
   const loadingStyle = { color: '#666', fontStyle: 'italic' };
   const errorStyle = { color: '#d32f2f', fontWeight: 'bold' };
-
+   
  
 
   return (
-    <div className="stock-wrapper">
-      <div className="stock-container">
+    <div className="stock-container">
+
         <h2 style={{color: '#1976d2', textAlign: 'center'}}>
           📈 Stock Analysis for {ticker}
         </h2>
@@ -64,7 +67,7 @@ function Stock({ticker}) {
               
 
         </div>
-      </div>
+      
       
 
       {/* CHART SECTION - Currently unavailable */}
@@ -177,6 +180,7 @@ function Stock({ticker}) {
 }
 
 export default Stock;
+
 
 // This component is used to display stock information.
 // It can be used to show stock prices, trends, and other related data.

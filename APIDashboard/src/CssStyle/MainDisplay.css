@@ -1,0 +1,12 @@
+.MainDisplay {
+  width: 500px;/* Set a fixed width for the main display */
+  background: linear-gradient(180deg, #2d5016 0%, #1a4d73 100%);
+  padding: 2rem 0;
+  border-right: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 4px 0 20px rgba(0,0,0,0.15);
+  position: relative;
+  overflow: hidden;
+}

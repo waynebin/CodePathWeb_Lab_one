@@ -1,9 +1,8 @@
-import { useState } from 'react'
-import './App.css'
-import Stock from './Stock.jsx'
-import StockAttribute from './StockAttribute.jsx'
-import Sidebar from './Sidebar.jsx'
-
+import { useState } from 'react';
+import './App.css';
+import Stock from './Stock.jsx';
+import StockAttribute from './StockAttribute.jsx';
+import Sidebar from './Sidebar.jsx';
 
 console.log('App.jsx loaded');
 console.log('Environment variables:', {
@@ -13,33 +12,43 @@ console.log('Environment variables:', {
 
 function App() {
   const [ticker, setTicker] = useState(null);
+  const [inputValue, setInputValue] = useState('');
+
+  const handleSearch = () => {
+    setTicker(inputValue.toUpperCase());
+  };
 
   return (
     <>
       <div className="App_header">
         <h1>Welcome to the Stock Info</h1>
         <p>This app displays stock information.</p>
-        
-        <button onClick={() => setTicker(ticker ? null : 'AAPL')}>
-          {ticker ? 'Clear Ticker' : 'Set Ticker '}
-        </button>
-        <input 
+
+        <input
           type="text"
           placeholder="Enter stock ticker (e.g., AAPL)"
-          value={ticker || ''}
-          onChange={(e) => setTicker(e.target.value.toUpperCase())}
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
         />
+        <button onClick={handleSearch}>Search</button>
+        <button onClick={() => setTicker(null)}>Clear</button>
+
       </div>
-      {/* Controls Section */}
       <div className="App_components">
-        <Sidebar />
-        <div className="stock-main-content">
-          <Stock ticker={ticker} /> 
-        </div>
-        <StockAttribute />
+        {ticker ? (
+          <>
+            <Sidebar ticker={ticker} />
+            <div className="stock-main-content">
+              <Stock ticker={ticker} />
+            </div>
+            <StockAttribute />
+          </>
+        ) : (
+          <p>Enter a stock ticker to see details.</p>
+        )}
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
