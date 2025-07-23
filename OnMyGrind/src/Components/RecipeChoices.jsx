@@ -1,11 +1,9 @@
 import React from "react";
-import { Component, useState, useEffect } from 'react';
-
 
 const RecipeChoices = ({handleChange,label,choices,checked}) => {
 
     return (
-           <div className=" radio-buttons">
+           <div className="radio-buttons">
             {choices &&
                 choices.map((choice)=>(
                     <li key={choice}>
@@ -19,21 +17,9 @@ const RecipeChoices = ({handleChange,label,choices,checked}) => {
                         />
                         {choice}
                     </li>
-
-
                 ))}
-
-
            </div>
-
-
-
-
-
     );
-
-
-
 };
 export default RecipeChoices;
 
