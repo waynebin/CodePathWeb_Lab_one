@@ -49,7 +49,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='src/assets/project_six_WalkThrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='src/assets/project_seven_WalkThrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
