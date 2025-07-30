@@ -1,0 +1,26 @@
+.web-form-container {
+    min-height: 100vh;
+    padding: 2rem;
+    background-image: url('../assets/20250729_0451_Modern GTA Racing Teams_simple_compose_01k1anxythe15bntrvwvw23zra.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.web-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    
+}
+
+.radio-label {
+    color: white;
+    margin-bottom: 1rem;
+}

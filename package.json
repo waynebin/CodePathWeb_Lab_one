@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "@polygon.io/client-js": "^7.4.0",
-    "lightweight-charts": "^5.0.8"
+    "@supabase/supabase-js": "^2.53.0",
+    "lightweight-charts": "^5.0.8",
+    "react-router": "^7.7.1"
   }
 }
