@@ -1,0 +1,30 @@
+.Register-container {
+    min-height: 100vh;
+
+    background-image: url('../assets/20250803_0409_T-Rex Silhouette_simple_compose_01k1qfkcbreqqa1472cm2d2jyj.png');
+    background-size: cover;
+    background-position: center;
+    }
+
+
+.Register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    padding: 20px;
+    
+    width: 20%;
+    height: 20%;
+    box-shadow: 0ch 0 10px rgba(0, 0, 0, 0.1);
+       
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(63, 211, 13, 0.1);
+    transition: 0.3s ease-in-out;
+    outline: orange;
+    background-color: rgba(104, 141, 142, 0);
+    
+
+}

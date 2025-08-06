@@ -1,0 +1,17 @@
+.post-page {
+    position: relative; /* Add this for positioning context */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("../assets/20250730_2139_Blue White Gradient_simple_compose_01k1f248nce4gs3kw7hmk6df7j.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
