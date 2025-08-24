@@ -1,0 +1,45 @@
+.app-container {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url('../assets/20250729_0458_Select Car Teams_remix_01k1ap8g4ceyqa2d1wa4t56zt0.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+
+  
+}
+
+.header {
+  background-color: #282c34;
+  text-align: center;
+  color: white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20%;
+  
+}
+
+.Main-container {
+  display: flex;
+  flex: 1;
+  margin-top: 80px;
+  min-height: calc(100vh - 80px);
+  background-size: 80% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  overflow: hidden;
+  padding: 0;
+}

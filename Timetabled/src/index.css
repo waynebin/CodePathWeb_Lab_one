@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh; 
+}
+
+th {
+  width: 120px;
+  padding-top:25px;
+  padding-bottom:30px;
+  padding-left: 30px;
+  
+}
+th:first-child {
+  padding-left: 100px;
+}
+
+td {
+  padding: 5px;
+}
+
+.time {
+  height: 40px;
+}
+
+
+.Event {
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  margin: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: var(--color, #3498db);
+}
+
+/* Event color variations */
+.Event.blue {
+  background-color: #3498db;
+}
+
+.Event.green {
+  background-color: #2ecc71;
+}
+
+.Event.red {
+  background-color: #e74c3c;
+}
+
+.Event.purple {
+  background-color: #9b59b6;
+}
+
+.Event.orange {
+  background-color: #f39c12;
+}
+
+.Event.pink {
+  background-color: #e91e63;
+}
+
+.Event.teal {
+  background-color: #1abc9c;
+}
+
+.Event.yellow {
+  background-color: #f1c40f;
+  color: #333; /* Dark text for better contrast on yellow */
+}
+
+/* Hover effect for events */
+.Event:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
