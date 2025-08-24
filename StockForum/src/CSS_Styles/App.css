@@ -1,0 +1,67 @@
+
+
+.app-container {
+  position: relative; /* Add this for positioning context */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("../assets/20250730_2139_Blue White Gradient_simple_compose_01k1f248nce4gs3kw7hmk6df7j.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App-header {
+  width: 100%;
+  text-align: center;
+  padding: 2rem 0;
+  color: white;
+}
+
+.App-content {
+  flex-grow: 1; /* Allow content to grow */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  gap: 2rem; /* Add space between items */
+  justify-content: center; /* Center items horizontally */
+}
+
+.App-footer {
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+}
+
+.Main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+  min-height: calc(100vh - 80px);
+  background-size: 80% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  overflow: hidden;
+  padding: 0;
+}
+
+.logo-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+}

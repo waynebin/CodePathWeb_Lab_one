@@ -1,0 +1,51 @@
+.chat-forum {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(58, 49, 67, 0.8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+   
+}
+
+.chat-messages {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 12px;
+}
+
+.chat-input {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+}
+
+.chat-input img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 8px;
+  
+}
+.user-profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+.chat-input textarea {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  resize: none;
+}
+
+.chat-input button {
+  margin-left: 8px;
+}

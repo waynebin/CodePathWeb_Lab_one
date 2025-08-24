@@ -1,0 +1,67 @@
+.crew-gallery {
+    min-height: 100vh;
+    padding: 2rem;
+    background-image: url('../assets/20250729_0429_Modern Game Environment_simple_compose_01k1ampwaze3et9g9jak6ksxz7.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.crew-gallery h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.crew-gallery p {
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.crew-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.crew-card {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 1.5rem;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.crew-card h3 {
+    margin-bottom: 1rem;
+    color: #646cff;
+}
+
+.crew-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.crew-card li {
+    margin: 0.5rem 0;
+}
+
+.back-button, .create-crew-button {
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    background-color: #1a1a1a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover, .create-crew-button:hover {
+    background-color: #646cff;
+}

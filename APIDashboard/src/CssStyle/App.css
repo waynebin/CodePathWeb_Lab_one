@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#root {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.body {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  min-height: 100vh;  
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+  min-height: calc(100vh - 140px);
+  margin-top: 120px; /* Add top margin to account for fixed header */
+  gap: 20px; /* Add gap between components */
+  padding-right: 20px; /* Add padding for the right edge */
+}
+
+.sidebar-container {
+  flex-shrink: 0;
+}
+/*
+.content-area {
+  flex: 3; /* Takes up 3/4 of available space */
+
+/* Reserve space for future right component */
+.right-component-space {
+  flex: 1; /* Takes up 1/4 of available space */
+  min-width: 200px; /* Minimum width for the right component */
+  /* This space is ready for your next component */
+}
+
+.App-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 1.5rem 3rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1000;
+}
+
+.App-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #28a745, #17a2b8);
+  border-radius: 2px;
+}
+
+.App-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  letter-spacing: 1px;
+}
+
+.App-header p {
+  font-size: 1.1rem;
+  color: #f8f9fa;
+  font-weight: 300;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    margin-top: 100px; /* Adjust for smaller header on mobile */
+    gap: 10px; /* Smaller gap on mobile */
+    padding-right: 10px; /* Smaller padding on mobile */
+  }
+  
+  .sidebar {
+    width: 100%;
+    min-height: 200px;
+    height: auto;
+  }
+  
+  .content-area {
+    margin-left: 0;
+    border-radius: 0;
+    flex: 1; /* Full width on mobile */
+  }
+  
+  .right-component-space {
+    flex: none; /* Don't use flex on mobile */
+    min-width: auto; /* Reset min-width */
+    width: 100%; /* Full width on mobile */
+  }
+  
+  .App-header {
+    padding: 1rem 2rem;
+  }
+  
+  .App-header h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Smooth scrollbar for sidebar */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #28a745, #17a2b8);
+  border-radius: 3px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #1e7e34, #138496);
+}
