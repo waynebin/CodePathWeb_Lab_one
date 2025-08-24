@@ -5,7 +5,7 @@ import supabase                      from '../Client';
 import { Container, Card, Button, Form } from 'react-bootstrap';
 
 export default function PostChat() {
-  const { postId }   = useParams();
+  const { postId } = useParams();
   const navigate     = useNavigate();
   const [post, setPost]       = useState(null);
   const [replies, setReplies] = useState([]);
@@ -13,30 +13,27 @@ export default function PostChat() {
   const [loading, setLoading] = useState(true);
   const user = supabase.auth.getUser();
 
-  // 1) fetch post + replies
+  // 1) fetch post + replies create a async function so we can use await
   const fetchData = async () => {
     setLoading(true);
     try {
-      // fetch the single post (including image_url & user_id)
-      const { data: p, error: perr } = await supabase
+      // fetch the single post (including post id)
+      const { data, error } = await supabase
         .from('Post')
-        .select('id, Post_Title, Post_text,created_at, likes_count')
-        .eq('id', postId)
-        .single();
-      if (perr) throw perr;
+        .select('id, Post_Title, Post_text,created_at, likes_count,Reply,reply_count')
+        .eq('id', postId)// filter by postId
+        .single()
+        if (error) {
+          alert('Could not load post.');
+          throw error;
+        }
 
-      // fetch its replies
-      const { data: rs, error: rerr } = await supabase
-        .from('Reply')
-        .select('id, reply_text, created_at, user_id')
-        .eq('Post_Id', postId)
-        .order('created_at', { ascending: true });
-      if (rerr) console.warn(rerr);
-
-      setPost(p);
-      setReplies(rs || []);
+      setPost(data);
+      setReplies(data.replies || []);
     } catch (e) {
-      console.error(e);
+      console.error('Error fetching post:', e);
+      alert('Could not load post.');
+      navigate(-1);
     } finally {
       setLoading(false);
     }
@@ -68,9 +65,9 @@ export default function PostChat() {
     if (!text) return alert('Reply cannot be empty');
 
     const { data, error } = await supabase
-      .from('Reply')
-      .insert([{ Post_Id: postId, reply_text: text }])
-      .select()           // <-- need to select so data[0] is returned
+      .from('Post')
+      .insert([{ Reply: text }])
+      .select()         // <-- need to select so data[0] is returned
       .single();
     if (error) {
       console.error('Error adding reply:', error);

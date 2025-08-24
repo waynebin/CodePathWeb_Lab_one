@@ -21,7 +21,7 @@ export default function EditPostPage() {
 
       const { data, error } = await supabase
         .from('Post')
-        .select('Post_Title, Post_text, image_url, user_id')
+        .select('id, Post_Title, Post_text,created_at, likes_count,Reply,reply_count')
         .eq('id', postId)
         .single();
 
